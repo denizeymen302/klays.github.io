@@ -1,208 +1,148 @@
 <!DOCTYPE html>
 <html lang="tr">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Liberty Roleplay</title>
-
-  <style>
-    /* GENEL */
-    body {
-      margin: 0;
-      font-family: Arial, sans-serif;
-      background: #0b0b0b;
-      color: #ddd;
-    }
-    a {
-      text-decoration: none;
-      color: inherit;
-    }
-
-    /* ÜST MENU */
-    nav {
-      background: #111;
-      padding: 10px 20px;
-      border-bottom: 1px solid #c62828;
-      position: sticky;
-      top: 0;
-      z-index: 1000;
-    }
-    nav ul {
-      list-style: none;
-      display: flex;
-      gap: 20px;
-      margin: 0;
-      padding: 0;
-    }
-    nav ul li a {
-      padding: 8px 12px;
-      border-radius: 6px;
-      transition: 0.3s;
-      color: #c62828;
-      font-weight: 600;
-    }
-    nav ul li a:hover {
-      background: #c62828;
-      color: #fff;
-    }
-
-    /* BUTTON STİLLER */
-    .btn {
-      padding: 12px 22px;
-      background: #c62828;
-      color: #fff;
-      border-radius: 8px;
-      font-weight: 600;
-      transition: 0.3s;
-      display: inline-block;
-      margin-top: 10px;
-    }
-    .btn:hover {
-      background: #b71c1c;
-    }
-
-    /* GENEL SECTION */
-    section {
-      padding: 60px 20px;
-      text-align: center;
-      max-width: 1000px;
-      margin: auto;
-    }
-
-    /* İEM Bölüm */
-    #iem-section h2 {
-      color: #c62828;
-      margin-bottom: 20px;
-    }
-    .iem-desc {
-      color: #bbb;
-      max-width: 700px;
-      margin: 0 auto 40px;
-    }
-    .promotion-grid {
-      display: grid;
-      grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
-      gap: 25px;
-      margin-bottom: 40px;
-    }
-    .promotion-box {
-      background: #111;
-      border: 1px solid #c62828;
-      border-radius: 14px;
-      padding: 25px;
-      transition: 0.3s;
-    }
-    .promotion-box:hover {
-      transform: translateY(-6px);
-      box-shadow: 0 10px 30px rgba(198, 40, 40, 0.3);
-    }
-    .promotion-box h3 {
-      color: #c62828;
-      margin-bottom: 10px;
-    }
-    .promotion-box p {
-      color: #ddd;
-      font-size: 14px;
-    }
-    .buttons {
-      display: flex;
-      justify-content: center;
-      gap: 15px;
-      flex-wrap: wrap;
-    }
-
-    /* MOBİL UYUM */
-    @media (max-width: 768px) {
-      nav ul {
-        flex-direction: column;
-        gap: 10px;
-      }
-      .promotion-grid {
-        grid-template-columns: 1fr;
-      }
-      section {
-        padding: 40px 15px;
-      }
-      .buttons {
-        flex-direction: column;
-      }
-    }
-
-  </style>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Liberty Roleplay | MTA RP</title>
+    <style>
+        * { margin: 0; padding: 0; box-sizing: border-box; font-family: Arial, Helvetica, sans-serif; }
+        body {
+            background: linear-gradient(135deg, #0b0b0b, #1a0000);
+            color: #fff;
+        }
+        header {
+            padding: 80px 20px;
+            text-align: center;
+            background: radial-gradient(circle at top, #3b0000, #0b0b0b);
+        }
+        header h1 {
+            font-size: 52px;
+            color: #b30000;
+            letter-spacing: 2px;
+        }
+        header p {
+            margin-top: 15px;
+            font-size: 18px;
+            opacity: 0.85;
+        }
+        .buttons {
+            margin-top: 30px;
+        }
+        .buttons a {
+            text-decoration: none;
+            color: #fff;
+            padding: 14px 28px;
+            margin: 10px;
+            border-radius: 6px;
+            background: #b30000;
+            transition: 0.3s;
+            display: inline-block;
+        }
+        .buttons a.secondary {
+            background: transparent;
+            border: 2px solid #b30000;
+        }
+        .buttons a:hover {
+            background: #e60000;
+        }
+        section {
+            padding: 70px 20px;
+            max-width: 1100px;
+            margin: auto;
+        }
+        .section-title {
+            text-align: center;
+            margin-bottom: 50px;
+        }
+        .section-title h2 {
+            font-size: 36px;
+            color: #b30000;
+        }
+        .cards {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 25px;
+        }
+        .card {
+            background: rgba(0,0,0,0.6);
+            border: 1px solid rgba(179,0,0,0.3);
+            border-radius: 10px;
+            padding: 25px;
+            transition: 0.3s;
+        }
+        .card:hover {
+            transform: translateY(-6px);
+            border-color: #b30000;
+        }
+        .card h3 {
+            margin-bottom: 10px;
+            color: #e60000;
+        }
+        footer {
+            text-align: center;
+            padding: 25px;
+            background: #0b0b0b;
+            opacity: 0.8;
+            font-size: 14px;
+        }
+    </style>
 </head>
 <body>
 
-  <!-- ÜST MENU -->
-  <nav>
-    <ul>
-      <li><a href="#discord-section">Discord’a Katıl</a></li>
-      <li><a href="#factions-section">Factionlar</a></li>
-      <li><a href="#iem-section">İstanbul Emniyet Genel Müdürlüğü</a></li>
-    </ul>
-  </nav>
-
-  <!-- DİSCORD BÖLÜMÜ -->
-  <section id="discord-section">
-    <h2>Liberty Roleplay Discord</h2>
-    <a href="https://discord.com/channels/1439370293159137424/1467248547790328160" target="_blank" class="btn">
-      Discord Sunucusuna Katıl
-    </a>
-  </section>
-
-  <!-- FACTION BÖLÜMÜ -->
-  <section id="factions-section">
-    <h2>Factionlar</h2>
-    <p>Liberty Roleplay sunucusundaki factionlar hakkında bilgiler buraya eklenebilir.</p>
-  </section>
-
-  <!-- İEM BÖLÜMÜ -->
-  <section id="iem-section">
-    <h2>İEM Rütbeler</h2>
-    <p class="iem-desc">
-      İstanbul Emniyet Müdürlüğü bünyesinde rütbe atlamaları,
-      aktif görev, disiplin ve rol kalitesine göre yapılmaktadır.
-    </p>
-
-    <div class="promotion-grid">
-      <div class="promotion-box">
-        <h3>👮 Polis Adayı</h3>
-        <p>Eğitim sürecini tamamlar. Temel polis RP kuralları öğretilir.</p>
-      </div>
-      <div class="promotion-box">
-        <h3>👮 Polis Memuru</h3>
-        <p>Aktif devriye ve operasyonlara katılır. RP performansı takip edilir.</p>
-      </div>
-      <div class="promotion-box">
-        <h3>⭐ Kıdemli Polis</h3>
-        <p>Tecrübeye dayalı terfi. Yeni personellere rehberlik eder.</p>
-      </div>
-      <div class="promotion-box">
-        <h3>🎖️ Komiser</h3>
-        <p>Birim yönetimi ve operasyon planlamasında görev alır.</p>
-      </div>
-      <div class="promotion-box">
-        <h3>🎖️ Başkomiser</h3>
-        <p>Komiserleri denetler, disiplin ve raporlama süreçlerini yürütür.</p>
-      </div>
-      <div class="promotion-box">
-        <h3>🏅 Emniyet Amiri</h3>
-        <p>İEM genel yönetimi ve üst düzey karar mekanizması.</p>
-      </div>
-    </div>
-
+<header>
+    <h1>LIBERTY ROLEPLAY</h1>
+    <p>MTA Genel RP & Polis Odaklı Gerçekçi Rol Deneyimi</p>
     <div class="buttons">
-      <a href="https://discord.com/channels/1439370293159137424/1467248547790328160"
-         target="_blank"
-         class="btn">
-         İEM Başvuru Kanalı
-      </a>
+        <a href="https://discord.gg/CRFEBggqXY" target="_blank">Discord'a Katıl</a>
+        <a href="#factions" class="secondary">Factionlar</a>
     </div>
-  </section>
+</header>
 
-  <!-- FOOTER -->
-  <footer>
+<section>
+    <div class="section-title">
+        <h2>Sunucu Hakkında</h2>
+    </div>
+    <div class="cards">
+        <div class="card">
+            <h3>Genel RP</h3>
+            <p>Gerçekçi şehir hayatı, sivil roller, iş sistemleri ve kaliteli etkileşim.</p>
+        </div>
+        <div class="card">
+            <h3>Polis Roleplay</h3>
+<p>Disiplinli IEM yapısı, eğitimler, operasyonlar ve prosedür odaklı RP.</p>
+
+        </div>
+        <div class="card">
+            <h3>Adalet & Denge</h3>
+            <p>Aktif yetkili ekibi ve adil yönetim anlayışı ile dengeli bir RP ortamı.</p>
+        </div>
+    </div>
+</section>
+
+<section id="factions">
+    <div class="section-title">
+        <h2>Factionlar</h2>
+    </div>
+    <div class="cards">
+        <div class="card">
+            <h3>IEM</h3>
+<p>İstanbul Emniyet Müdürlüğü – profesyonel ve ciddi polis RP.</p>
+
+        </div>
+        <div class="card">
+            <h3>Sivil Roller</h3>
+            <p>İş insanları, taksiciler, mekan sahipleri ve daha fazlası.</p>
+        </div>
+        <div class="card">
+            <h3>Yeraltı RP</h3>
+            <p>Mafya ve suç RP’si kontrollü ve kurallı şekilde oynanır.</p>
+        </div>
+    </div>
+</section>
+
+<footer>
     © 2026 Liberty Roleplay | Tüm Hakları Saklıdır
-  </footer>
+</footer>
 
 </body>
 </html>
