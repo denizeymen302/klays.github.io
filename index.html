@@ -139,7 +139,222 @@
         </div>
     </div>
 </section>
-<section id="iem">
+<!DOCTYPE html>
+<html lang="tr">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>ROTA RP - İEM Bölümü</title>
+
+  <!-- Gömülü CSS -->
+  <style>
+    /* GENEL */
+    body {
+      margin: 0;
+      font-family: Arial, sans-serif;
+      background: #0b0b0b;
+      color: #ddd;
+    }
+
+    a {
+      text-decoration: none;
+    }
+
+    /* BUTONLAR */
+    .btn {
+      padding: 12px 22px;
+      background: #c62828;
+      color: #fff;
+      border-radius: 8px;
+      font-weight: 600;
+      transition: 0.3s;
+      display: inline-block;
+      margin-top: 10px;
+    }
+
+    .btn:hover {
+      background: #b71c1c;
+    }
+
+    .btn-outline {
+      background: transparent;
+      border: 2px solid #c62828;
+      color: #c62828;
+    }
+
+    .btn-outline:hover {
+      background: #c62828;
+      color: #fff;
+    }
+
+    section {
+      padding: 60px 20px;
+      text-align: center;
+    }
+
+    /* İEM Başvuru */
+    #iem {
+      background: #111;
+      margin: 50px auto;
+      border-radius: 12px;
+      padding: 40px 20px;
+      max-width: 900px;
+      border: 1px solid #c62828;
+    }
+
+    #iem h2 {
+      color: #c62828;
+      margin-bottom: 20px;
+    }
+
+    #iem ul {
+      list-style: none;
+      padding: 0;
+      margin: 20px 0;
+    }
+
+    #iem ul li {
+      margin: 10px 0;
+    }
+
+    .buttons {
+      display: flex;
+      gap: 15px;
+      justify-content: center;
+      flex-wrap: wrap;
+    }
+
+    #iem small {
+      display: block;
+      margin-top: 15px;
+      color: #aaa;
+    }
+
+    /* Rütbeler & Alım Şartları */
+    #iem-details h2 {
+      margin-bottom: 40px;
+      color: #c62828;
+    }
+
+    .iem-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+      gap: 25px;
+      margin-bottom: 40px;
+    }
+
+    .iem-box {
+      background: #111;
+      border: 1px solid #c62828;
+      border-radius: 12px;
+      padding: 25px;
+    }
+
+    .iem-box h3 {
+      color: #c62828;
+      margin-bottom: 15px;
+    }
+
+    /* Rütbe & Terfi Sistemi */
+    #iem-promotion {
+      margin-top: 100px;
+      padding: 60px 20px;
+      background: #0b0b0b;
+      text-align: center;
+    }
+
+    #iem-promotion h2 {
+      color: #c62828;
+      margin-bottom: 15px;
+    }
+
+    .iem-desc {
+      max-width: 700px;
+      margin: 0 auto 50px;
+      color: #bbb;
+    }
+
+    .promotion-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+      gap: 25px;
+      margin-bottom: 40px;
+    }
+
+    .promotion-box {
+      background: #111;
+      border: 1px solid #c62828;
+      border-radius: 14px;
+      padding: 25px;
+      transition: 0.3s;
+    }
+
+    .promotion-box:hover {
+      transform: translateY(-6px);
+      box-shadow: 0 10px 30px rgba(198, 40, 40, 0.3);
+    }
+
+    .promotion-box h3 {
+      color: #c62828;
+      margin-bottom: 10px;
+    }
+
+    .promotion-box p {
+      color: #ddd;
+      font-size: 14px;
+    }
+
+    /* MOBİL UYUM */
+    @media (max-width: 768px) {
+      .iem-grid, .promotion-grid {
+        grid-template-columns: 1fr;
+      }
+
+      section {
+        padding: 40px 15px;
+      }
+
+      .buttons {
+        flex-direction: column;
+      }
+    }
+  </style>
+</head>
+
+<body>
+
+  <!-- İEM Başvuru Bölümü -->
+  <section id="iem">
+    <h2>İstanbul Emniyet Müdürlüğü</h2>
+    <p>
+      İstanbul Emniyet Müdürlüğü bünyesinde görev alarak
+      roleplay deneyimini en üst seviyede yaşa.
+    </p>
+
+    <ul>
+      <li>✔ Disiplinli RP ortamı</li>
+      <li>✔ Eğitim & terfi sistemi</li>
+      <li>✔ Aktif operasyonlar</li>
+    </ul>
+
+    <div class="buttons">
+      <a href="https://discord.com/channels/1439370293159137424/1467248547790328160"
+         target="_blank"
+         class="btn">
+        İEM Başvurusu
+      </a>
+
+      <a href="https://discord.com/channels/1439370293159137424/1467248547790328160"
+         target="_blank"
+         class="btn btn-outline">
+        Discord Başvuru
+      </a>
+    </div>
+
+    <small>Başvurular Discord üzerinden alınmaktadır.</small>
+  </section>
+
+ <section id="iem">
   <h2>İEM Rütbeler</h2>
   <p class="iem-desc">
     İstanbul Emniyet Müdürlüğü bünyesinde rütbe atlamaları,
@@ -182,10 +397,12 @@
   </div>
 </section>
 
+
 <footer>
     © 2026 Liberty Roleplay | Tüm Hakları Saklıdır
 </footer>
 
 </body>
 </html>
+
 
